@@ -21,7 +21,7 @@ public class RssServiceTest {
 		rssService = new RssService();
 	}
 
-	@Test
+	//@Test
 	public void testGetItemsFile() throws RssException {
 		List<Item> items = rssService.getItems(new File("test-rss/javavids.xml"));
 		assertEquals(10, items.size());
