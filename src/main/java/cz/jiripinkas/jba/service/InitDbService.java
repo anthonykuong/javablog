@@ -51,7 +51,7 @@ public class InitDbService {
 			userAdmin.setEnabled(true);
 			userAdmin.setName("admin");
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-			userAdmin.setPassword(encoder.encode("admin"));
+			userAdmin.setPassword(encoder.encode("admin1"));
 			List<Role> roles = new ArrayList<Role>();
 			roles.add(roleAdmin);
 			roles.add(roleUser);
@@ -59,9 +59,9 @@ public class InitDbService {
 			userRepository.save(userAdmin);
 
 			Blog blogJavavids = new Blog();
-			blogJavavids.setName("JavaVids");
+			blogJavavids.setName("Toronto Star News Feeds");
 			blogJavavids
-					.setUrl("http://feeds.feedburner.com/javavids?format=xml");
+					.setUrl("http://www.thestar.com/feeds.topstories.rss");
 			blogJavavids.setUser(userAdmin);
 			blogRepository.save(blogJavavids);
 

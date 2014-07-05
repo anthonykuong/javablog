@@ -6,7 +6,11 @@
    <bean class="java.net.URI" id="dbUrl">
       <constructor-arg value="#{systemEnvironment['DATABASE_URL']}" />
    </bean>
+<!-- jdbc:postgresql://localhost:5432/anthonydb?username=admin&password=admin 
+ export DATABASE_URL=postgres://scott:tiger@localhost:5432/myapp
+jdbc:postgresql://<host>:<port>/<dbname>?username=<username>&password=<password>
 
+-->
    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
       <property name="url"
          value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }" />

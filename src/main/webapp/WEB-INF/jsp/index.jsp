@@ -2,11 +2,19 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="../layout/taglib.jsp"%>
+<h1>ANTHONY KU ONG. herokuapp. com</h1>
+<p> Here are the top syndicated news and content news from the Toronto Star, and the ones you've subscribed too!
+    <a href="http://www.anthonykuong.com" ><i> - Anthony Ku Ong</i></a>
+	 </p>
+	 
+	 <p>
+	  ( Credit goes to Jiri Pinkas for the original site design )
+	 
+	 </p>
+</p>
 
-<h1>Latest news from the Java world:</h1>
 
-
-<table class="table table-bordered table-hover table-striped">
+<table class="table table-bordered table-hover table-striped table-responsive">
 	<thead>
 		<tr>
 			<th>date</th>
@@ -34,3 +42,4 @@
 		</c:forEach>
 	</tbody>
 </table>
+
